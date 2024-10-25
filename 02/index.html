@@ -1,34 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
         <style>
-            .box{
-                position: relative;
-                left: 20px;
-                top: 20px;
-                width: 70px;
-                height: 70px;
-                background: red;
-                animation: minhaAnimacao 5s 3s 3 alternate;
-                position: relative;
+          
+        .box{
+            position: relative;
+            left: 10px;
+            top: 10px;
+            width: 200px;
+            height: 200px;
+            background: red;
+            animation-name: minhaAnimacao;
+            animation-duration: 7s;
+        }
+        .box:hover {
+            border: solid 2px black;
+            transition: border 3s 2s ;
+
+
+        }
+        @keyframes minhaAnimacao {
+            0%{
+                transform: rotate(0deg);
+                background-color: green;
+                
+            } 
+            25%{
+                transform: rotate(90deg);
+                background-color: blue;
             }
-            .box:hover{
-                border: solid 2px black;
-                transition: border 3s 2s;
+            50%{
+                transform: rotate(180deg);
+                background-color: red;
             }
-            @keyframes minhaAnimacao {
-                from{ left: 10px;
-                }
-                 to{ 
-                    left: 100px;
-                    rotate: 90deg;
-                    background: blue;
-                    
-                 }
+            75%{
+                transform: rotate(270deg);
+                background-color: black;
             }
+            100%{
+                transform: rotate(180deg);
+                background-color: rgb(217, 255, 0);
+
+            }
+            
+            from{
+                left: 10px;
+            }
+            to{
+                left: 200px;
+                
+            }
+        }
+
         </style>
     </head>
     <body>
         <div class="box"></div>
     </body>
 </html>
+
+
