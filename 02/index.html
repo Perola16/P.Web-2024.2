@@ -1,33 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
         <style>
-            .box{
-                position: relative;
+          
+        .box{
+            position: relative;
+            left: 10px;
+            top: 10px;
+            width: 200px;
+            height: 200px;
+            background: red;
+            animation-name: minhaAnimacao;
+            animation-duration: 7s;
+        }
+        .box:hover {
+            border: solid 2px black;
+            transition: border 3s 2s ;
+
+
+        }
+        @keyframes minhaAnimacao {
+            0%{
+                transform: rotate(0deg);
+                background-color: green;
+                
+            } 
+            25%{
+                transform: rotate(90deg);
+                background-color: blue;
+            }
+            50%{
+                transform: rotate(180deg);
+                background-color: red;
+            }
+            75%{
+                transform: rotate(270deg);
+                background-color: black;
+            }
+            100%{
+                transform: rotate(180deg);
+                background-color: rgb(217, 255, 0);
+
+            }
+            
+            from{
                 left: 10px;
+<<<<<<< HEAD
                 top: 10px;
                 width: 70px;
                 height: 70px;
                 background: red;
                 animation: minhaAnimacao 5s 3s 3 alternate;
+=======
+>>>>>>> 9efef55c513e55cac92fd9a3360eeb7978c6e24a
             }
-            .box:hover{
-                border: solid 2px black;
-                transition: border 3s 2s;
+            to{
+                left: 200px;
+                
             }
-            @keyframes minhaAnimacao {
-                from{ left: 10px;
-                }
-                 to{ 
-                    left: 100px;
-                    rotate: 90deg;
-                    background: blue;
-                    
-                 }
-            }
+        }
+
         </style>
     </head>
     <body>
         <div class="box"></div>
     </body>
 </html>
+
+
