@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercícios JavaScript 01</title>
+        <style type="text/css">
+        h1{
+            color: #e68fe6;
+        }
+        </style>
+        <script type="text/javascript">
+        function raizquadrada(arg){
+            var raiz= Math.sqrt(arg);
+            var mensagem="Raiz quadrada de 25 = ";
+            alert(mensagem+raiz)
+        }
+        function raizquadrada2(arg){
+            var raiz= Math.sqrt(arg);
+            var mensagem="Raiz quadrada de 36 = ";
+            alert(mensagem+raiz)
+        }
+        function raizquadrada3(arg){
+            var raiz= Math.sqrt(arg);
+            var mensagem="Raiz quadrada de 49 = ";
+            alert(mensagem+raiz)
+        }
+        function escreveDiv(texto){
+            document.getElementById("minhaDiv").innerHTML=texto;
+        }
+        function escreveDiv2(){
+            texto= prompt("Digite um texto qualquer: ");
+            document.getElementById("minhaDiv2").innerHTML=texto;
+        }
+        </script>
+    </head>
+    <body>
+        <h1>Raiz Quadrada</h1>
+        <br>
+        <button onclick="raizquadrada(25)">Raiz de 25</button><br>
+        <br>
+        <button onclick="raizquadrada2(36)">Raiz de 36</button><br>
+        <br>
+        <button onclick="raizquadrada3(49)">Raiz de 49</button><br>
+        <hr>
+        <h1>Escrevendo na Div</h1>
+        <br>
+        <button onclick="escreveDiv('<h2> Perola Pereira de Carvalho</h2>')">Escrever</button><br><br>
+        <div id="minhaDiv"></div>
+        <hr>
+        <h1>Escrevendo Texto Dinâmico</h1>
+        <br>
+        <button onclick="escreveDiv2()">Escrever</button><br><br>
+        <div id="minhaDiv2"></div>
+    </body>
+</html>
