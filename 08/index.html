@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Atividade 08</title>
+        <style type="text/css">
+            h1{
+                font-family: 'Times New Roman', Times, serif;
+                color: blueviolet;
+            }
+        </style>
+        <script>
+            let linguagens=Array();
+                linguagens[0]="Dart";
+                linguagens[1]="PHP";
+                linguagens[2]="Java";
+                linguagens[3]="Python";
+                linguagens[4]="Perl";
+                linguagens[5]="Ruby on Rails";
+                linguagens[6]="C++";
+            
+            function mostrarListaLinguagens(){
+                const container=document.getElementById("minhaDiv");
+                for(var i = 0; i < linguagens.length; i++){
+                    var tag="<h5>" + i + " - " + linguagens[i] + "</h5>";
+                    container.innerHTML += tag;
+                }
+            }
+            function posicaoLinguagens(){
+                var indice= prompt("Qual posição da lista deseja consultar?")
+                alert(linguagens[indice]);
+            }
+
+            let frutas=Array();
+                frutas[1]="Maça";
+                frutas[2]="Goiaba";
+                frutas[3]="Laranja";
+                frutas[4]="Tangerina";
+                frutas[5]="Morango";
+                frutas[6]="Pera";
+                frutas[7]="Uva";
+                frutas[8]="Banana";
+                frutas[9]="Manga";
+            
+            function mostrarfrutas(){
+            const container=document.getElementById("Div");
+            for(var i = 1; i < frutas.length; i++){
+                var texto="<h3>" + i + " - " + frutas[i] + "</h3>";
+                container.innerHTML += texto;
+                }
+            }
+            function posicaofrutas(){
+                var indice= prompt("Qual posição da lista deseja consultar?")
+                alert(frutas[indice]);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Array de linguagens</h1>
+        <button onclick="mostrarListaLinguagens()">Criar Array</button><br><br>
+        <button onclick="posicaoLinguagens()">Posição no Array</button>
+        <div id="minhaDiv"></div>
+        <hr>
+        <hr>
+        <h1>Array de Frutas</h1>
+        <button onclick="mostrarfrutas()">Criar Array</button><br><br>
+        <button onclick="posicaofrutas()">Posição no Array</button>
+        <div id="Div"></div>
+    </body>
+</html>
