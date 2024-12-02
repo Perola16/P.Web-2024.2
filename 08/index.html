@@ -29,6 +29,9 @@
                 var indice= prompt("Qual posição da lista deseja consultar?")
                 alert(linguagens[indice]);
             }
+            function limpar(){
+                minhaDiv.innerHTML = ""
+            }
 
             let frutas=Array();
                 frutas[1]="Maça";
@@ -52,18 +55,23 @@
                 var indice= prompt("Qual posição da lista deseja consultar?")
                 alert(frutas[indice]);
             }
+            function limpar2(){
+                Div.innerHTML = ""
+            }
         </script>
     </head>
     <body>
         <h1>Array de linguagens</h1>
         <button onclick="mostrarListaLinguagens()">Criar Array</button><br><br>
-        <button onclick="posicaoLinguagens()">Posição no Array</button>
         <div id="minhaDiv"></div>
+        <button onclick="limpar()">Limpar</button>
+        <button onclick="posicaoLinguagens()">Posição no Array</button>
         <hr>
         <hr>
         <h1>Array de Frutas</h1>
         <button onclick="mostrarfrutas()">Criar Array</button><br><br>
-        <button onclick="posicaofrutas()">Posição no Array</button>
         <div id="Div"></div>
+        <button onclick="limpar()">Limpar</button>
+        <button onclick="posicaofrutas()">Posição no Array</button>
     </body>
 </html>
